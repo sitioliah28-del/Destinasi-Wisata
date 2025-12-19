@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+
+/*      NAVIGASI ATAS        */
+
+.nav {
+    color: #fff;
+    display: flex;
+    padding: 10px 0;
+    background-color:black;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav li:hover {
+    background-color: blue;
+}
+
+.data-list {
+    margin-left: 40%;
+}
+
+.data-list li {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.wisata:hover .fa-chevron-down {
+    transform: rotate(-90deg);
+    transition: 0.5s;
+}
+
+.logo {
+    position: absolute;
+    top: 0;
+    left: 20px;
+}
+
+/* DROPDOWN */
+.list {
+    display: none;
+    background-color: black;
+    position: absolute;
+    padding: 20px;
+    z-index: 20;
+}
+
+.list li {
+    display: block;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.wisata:hover .list {
+    display: block;
+}
+
+/*     HEADER FULL IMAGE     */
+
+.header {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(60%);
+}
+
+.judul-header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.judul-header h1 {
+    font-size: 45px;
+    font-weight: 800;
+    color: #fff;
+    text-shadow: 2px 3px 10px ;
+}
+
+.judul-header p {
+    font-size: 26px;
+    color: #f1f1f1; /* ganti sesuai keinginan */
+    margin-top: 10px;
+    text-shadow: 2px 3px 10px black;
+}
+
+.artikel {
+    width: 90%;
+    margin: 40px auto;
+}
+
+.wisata-item {
+    margin-bottom: 60px;
+}
+
+.wisata-item h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #222;
+}
+
+.img-wisata {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.caption {
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.deskripsi {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* ===== GALERI FOTO ===== */
+
+.galeri-wisata {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.galeri-wisata img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.3s;
+    margin-bottom: 20px;
+}
+
+.galeri-wisata img:hover {
+    transform: scale(1.05);
+}
+
+/*Buton Link*/
+.btn-info {
+    background-color: #007bff;
+    color:white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+.btn-info:hover {
+    background-color: #0056b3;
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
+.footer {
+    background: #45596e;
+    padding: 50px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-col {
+    width: 30%;
+    min-width: 260px;
+}
+
+.footer-col h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.footer-col ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.footer-col ul li,
+.footer-col p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.footer-col a {
+    color: #000000;
+    text-decoration: none;
+}
+
+/* Supaya Link Navigasi Cepat tersusun ke bawah */
+.footer-col .data-list {
+    padding-left: 20px; /* biar rapi seperti list */
+}
+
+.footer-col .data-list a {
+    display: block;      /* biar turun ke bawah */
+    margin-bottom: 8px;  /* jarak antar item */
+}
+
+.footer-col .data-list li {
+    list-style: disc;    /* titik bullet */
+    color: #000;         /* warna tulisan */
+}
+
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 25px;
+    margin-top: 40px;
+    border-top: 1px solid #ccc;
+    font-size: 17px;
+}
+
+
+/* ===========================
+   FLOATING BUTTONS (IG + WA + MAP)
+   =========================== */
+.floating-buttons {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 999;
+}
+
+.float-btn {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: 0.2s ease;
+}
+
+/* Warna masing-masing ikon */
+.float-btn.ig  { background: #e4405f; }
+.float-btn.wa  { background: #25d366; }
+.float-btn.map { background: #0ea5e9; }
+
+.float-btn:hover {
+    transform: scale(1.1);
+}
+
+/* TOGGLE BUTTON*/
+.toggle-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: #25d366; /* hijau WhatsApp */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 30px;
+    z-index: 999;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.toggle-btn:hover {
+    transform: scale(1.1);
+}

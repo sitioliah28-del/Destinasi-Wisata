@@ -1,0 +1,580 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* NAVIGASI (MENU ATAS) */
+.nav {
+    color: #fff;                
+    display: flex;               /* Menyusun logo dan menu sejajar horizontal */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(7, 7, 7, 0.4);  /* Warna latar belakang hitam */
+    position: fixed;             /* Menempel di atas layar saat discroll */
+    width: 100%;                 /* Lebar penuh layar */
+    z-index: 10;                 /* Supaya berada di atas elemen lain */
+}
+
+.nav a {
+    color: #fff;                
+    text-decoration: none;       /* Menghilangkan garis bawah pada link */
+}
+
+.nav li:hover{
+    background-color: #444;
+}
+
+.nav a:hover {
+    color: #fff; /* Efek hover untuk tautan di menu navigasi */          
+}
+
+/* ===== MODAL KONTAK ===== */
+.modal-kontak {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+.modal-content-kontak {
+  background: #fff;
+  width: 90%;
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.modal-content-kontak h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.modal-content-kontak input,
+.modal-content-kontak textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.modal-content-kontak button {
+  width: 100%;
+  padding: 10px;
+  background: #ff9800;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-content-kontak button:hover {
+  background: #e68900;
+}
+
+.close-kontak {
+  float: right;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+
+.data-list {
+    margin-left: 40%;            /* Menggeser daftar menu ke kanan */
+}
+
+/* Setiap item menu ditampilkan sejajar horizontal */
+.data-list li {
+    display: inline-block;
+    margin-left: 15px;           /* Jarak antar item menu */
+}
+
+.wisata:hover .fa-chevron-down{
+    transform: rotate(0deg);
+    transition: 1s;
+}
+
+.wisata:hover .fa-chevron-down{
+    transform: rotate(-90deg);
+}
+
+.logo {
+  position: absolute;
+  top: 0%;
+  left: 20px;
+}
+
+
+.list {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5); /* transparan */
+    position: absolute;
+    padding: 20px;
+    z-index: 20;
+
+    backdrop-filter: blur(6px);      /* efek kaca (opsional) */
+    border-radius: 8px;              /* sudut halus */
+}
+
+
+.list li {
+    display: block;              /* Ditampilkan ke bawah (bukan sejajar) */
+    margin-bottom: 10px;
+    color: white;
+}
+
+/* Saat menu “wisata” di-hover, tampilkan dropdown list-nya */
+.wisata:hover .list {
+   display: block;
+    background-color: rgba(0, 0, 0, 0.5);        
+}
+
+/* Efek hover pada item dropdown */
+.list li:hover {
+    color: #fff;                 
+}
+
+/*BAGIAN HEADER*/
+.header {
+    position: relative;          /* Untuk mengatur posisi teks di dalamnya */
+    width: 100%;                 /* Lebar penuh layar */
+    height: 100vh;               /* Tinggi sama dengan tinggi layar */
+    overflow: hidden;  
+    margin-bottom: 50px;         
+}
+
+/* VIDEO SEBAGAI LATAR */
+.bg-video {
+    position: absolute;       
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;                /* Mengisi seluruh layar */
+    object-fit: cover;       
+    z-index: -1;                 /* Berada di bawah teks */
+}
+
+/* TEKS DI ATAS VIDEO */
+.des-header {
+    position: absolute;
+    top: 50%;                   
+    left: 50%;                  
+    transform: translate(-50%, -50%); /* Benar-benar di tengah layar */
+    text-align: center;          /* Teks rata tengah */
+    color: white;              
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7); /* Bayangan agar teks tetap terbaca */
+    z-index: 1;
+}
+
+/* Judul utama di dalam video */
+.des-header h1 {
+    font-weight: 700;            /* Huruf tebal */
+    font-size: 2.8em;              /* Ukuran besar */
+    margin-bottom: 5px;
+}
+
+/* Paragraf di bawah judul */
+.des-header p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 24px;
+  color: #fdfdfd;
+  font-weight: 600;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+  letter-spacing: 2px;
+}
+
+
+/* Logo di dalam header */
+.logo-header {
+    width:300px;               /* Sesuaikan ukuran logo */
+    height: auto;
+    margin-bottom: 0px;        /* Jarak antara logo dan teks */
+}
+
+
+/* bg card*/
+.bg-card{
+    width: 90%; /* lebarnya bordir*/
+    display: flex;
+    justify-content: center;/*agar card nya ke tengah*/
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.card{
+    width: 340px ;
+    height: 400px;
+    margin: auto;
+    margin: 0 20px 50px;
+
+}
+
+.card p {
+    margin-bottom: 10px;   /* jarak antara paragraf dan tombol */
+}
+
+
+.card:hover{
+    box-shadow: 0px 0px 10px #333;/* untuk */
+    transition: 300ms;
+}
+.gambar{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.gambar img{
+    width: 100%;
+    height: 100%;
+    transition: 1s; /*transisi gambarnya*/
+}
+.des-card{
+    padding: 5px;
+    padding-left: 15px;
+    padding-bottom: 20px;
+}
+.des-card h2{
+    color: rgb(13, 13, 122);
+    margin-bottom: 10px; /* kasih jarak judul*/
+}
+
+.des-card p{
+    line-height: 20px; /*kasih jarak*/
+    color: #333;
+    text-align: justify;/* paragraf agar rapih kiri-kanan*/
+    font-size: 17px;
+}
+
+.bg-card a{
+    text-decoration: none;
+}
+.card:hover img{
+    transform: scale(1.5); /* agar gambar ngezoom*/
+    transition: 2s;
+}
+
+/*FOOTER*/
+.footer {
+    background: #45596e;
+    padding: 50px 10px;
+    font-family: Arial, sans-serif;
+}
+.footer-container {
+    display: flex;
+    justify-content: flex-start; /* kolom rapat rapi */
+    flex-wrap: wrap;
+    gap: 30px; /* jarak antar kolom */
+    align-items: flex-start;
+}
+
+
+.footer-col {
+    width: 30%;
+    min-width: 20px;
+}
+
+.footer-col h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.footer-col ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.footer-col ul li,
+.footer-col p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.footer-col a {
+    color: #120101;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 25px;
+    margin-top: 40px;
+    border-top: 1px solid #ccc;
+    font-size: 17px;
+}
+
+/* =========================
+   FORM KONTAK
+   ========================= */
+.contact-section {
+  padding: 60px 20px;
+  background: #f4f7fb;
+  text-align: center;
+}
+
+.contact-section h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.contact-section p {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  color: #555;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.form-group {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #0645ad;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #0645ad;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  background: #043a8c;
+}
+
+
+/* ===== GALERI ===== */
+.gallery-section {
+    width: 90%;
+    margin: 80px auto;
+}
+
+.gallery-title {
+    text-align: center;
+    font-size: 32px;
+    color: #0d0d7a;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.gallery-desc {
+    text-align: center;
+    width: 70%;
+    margin: auto;
+    font-size: 17px;
+    color: #444;
+    margin-bottom: 40px;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Card Galeri */
+.gallery-card {
+    width: 340px;
+    background: #fff;
+    border-radius: 10px;
+    margin: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.gallery-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: 0.6s ease;
+}
+
+.gallery-card:hover img {
+    transform: scale(1.2);
+}
+
+.gallery-text {
+    padding: 15px;
+}
+
+.gallery-text h3 {
+    color: #0d0d7a;
+    margin-bottom: 10px;
+}
+
+.gallery-text p {
+    color: #333;
+    line-height: 20px;
+    text-align: justify;
+}
+
+.btn-info {
+    background-color: #444;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-bottom: 50px;
+}
+.btn-info:hover {
+    background-color: #0056b3;
+}
+
+
+/* ======= RESPONSIVE NAVBAR ======= */
+@media (max-width: 900px) {
+
+    .data-list {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .data-list li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .nav {
+        flex-direction: column;
+        padding-bottom: 15px;
+    }
+
+    .list {
+        position: relative;
+        padding: 10px 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .header {
+        height: auto;
+        padding-top: 80px; /* biar tidak ketutup navbar */
+    }
+
+    .des-header h1 {
+        font-size: 1.8em;
+    }
+
+    .des-header p {
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+
+    .logo-header {
+        width: 180px;
+        margin-bottom: 10px;
+    }
+}
+
+/* ======= CARD RESPONSIVE ======= */
+@media (max-width: 1024px) {
+    .card {
+        width: 300px;
+        height: auto;
+    }
+}
+
+@media (max-width: 80px) {
+    .bg-card {
+        justify-content: center;
+    }
+
+    .card {
+        width: 90%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .des-card p {
+        font-size: 15px;
+    }
+}
+
+/* ======= GALLERY RESPONSIVE ======= */
+@media (max-width: 900px) {
+    .gallery-desc {
+        width: 90%;
+        font-size: 16px;
+    }
+
+    .gallery-card {
+        width: 300px;
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery-card {
+        width: 100%;
+    }
+
+    .gallery-card img {
+        height: 180px;
+    }
+}
+
+@media (max-width: 600px) {
+    .bg-footer {
+        height: auto;
+        padding: 20px 0;
+        font-size: 14px;
+    }
+}
+
+
+
+
+
