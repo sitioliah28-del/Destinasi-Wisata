@@ -259,47 +259,6 @@
     transform: scale(1.5); /* agar gambar ngezoom*/
     transition: 2s;
 }
-
-.comment-section {
-  background: #f9f9f9;
-  padding: 40px;
-  margin: 40px auto;
-  width: 80%;
-  border-radius: 10px;
-}
-
-.comment-section h2 {
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.comment-section p {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.comment-section input,
-.comment-section textarea {
-  width: 100%;
-  padding: 10px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
-
-.comment-section button {
-  background: #0a7cff;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.comment-section button:hover {
-  background: #055ec4;
-}
-
-
 /*FOOTER*/
 .footer {
     background: #45596e;
@@ -492,6 +451,56 @@
     text-align: justify;
 }
 
+.review-section {
+  background: #f3f5f7;
+  padding: 50px 20px;
+}
+
+.review-box {
+  background: white;
+  max-width: 900px;
+  margin: auto;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.review-box h2 {
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+
+.review-box input,
+.review-box select,
+.review-box textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 18px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  background: #f8fafc;
+}
+
+.review-box textarea {
+  resize: none;
+}
+
+.review-box button {
+  background: #ff6b6b;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.review-box button:hover {
+  background: #e55353;
+}
+
+
 .btn-info {
     background-color: #444;
     color: white;
@@ -612,6 +621,7 @@
         font-size: 14px;
     }
 }
+
 
 
 
