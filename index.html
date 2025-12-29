@@ -157,35 +157,44 @@
 
   </div>
 </section>
-
-  <!-- FORM PENILAIAN -->
 <section class="review-section">
   <div class="review-box">
-    <h2>💬 Beri Penilaian</h2>
+    <h2>💬 Beri Penilaian Wisata</h2>
 
-    <form action="mailto:sitioliah28@gmail.com" method="post" enctype="text/plain">
+    <form action="https://formspree.io/f/abcdwxyz" method="POST">
 
-      <input type="text" name="Nama" placeholder="Nama Anda" required>
+      <input type="text" name="nama" placeholder="Nama Anda" required>
 
-      <input type="email" name="Email" placeholder="Email Anda" required>
+      <input type="email" name="email" placeholder="Email Anda" required>
 
-      <select name="Penilaian" required>
-        <option value="">⭐ Pilih Penilaian</option>
-        <option value="5 - Sangat Bagus">⭐⭐⭐⭐⭐ - Sangat Bagus</option>
-        <option value="4 - Bagus">⭐⭐⭐⭐ - Bagus</option>
-        <option value="3 - Cukup">⭐⭐⭐ - Cukup</option>
-        <option value="2 - Kurang">⭐⭐ - Kurang</option>
-        <option value="1 - Sangat Buruk">⭐ - Sangat Buruk</option>
+      <!-- PILIH WISATA -->
+      <select name="wisata" required>
+        <option value="">🏝️ Pilih Wisata</option>
+        <option value="Bali">Bali</option>
+        <option value="Candi Borobudur">Candi Borobudur</option>
+        <option value="Raja Ampat">Raja Ampat</option>
+        <option value="Labuan Bajo">Labuan Bajo</option>
+        <option value="Pulau Komodo">Pulau Komodo</option>
+        <option value="Danau Toba">Danau Toba</option>
       </select>
 
-      <textarea name="Komentar" rows="5" placeholder="Tulis masukan Anda..." required></textarea>
+      <!-- RATING -->
+      <select name="rating" required>
+        <option value="">⭐ Pilih Penilaian</option>
+        <option value="5 - Sangat Bagus">⭐⭐⭐⭐⭐ Sangat Bagus</option>
+        <option value="4 - Bagus">⭐⭐⭐⭐ Bagus</option>
+        <option value="3 - Cukup">⭐⭐⭐ Cukup</option>
+        <option value="2 - Kurang">⭐⭐ Kurang</option>
+        <option value="1 - Buruk">⭐ Buruk</option>
+      </select>
+
+      <textarea name="komentar" rows="5" placeholder="Tulis komentar Anda..." required></textarea>
 
       <button type="submit">Kirim</button>
-
     </form>
   </div>
 </section>
-<!-- FORM PENILAIAN SELESAI -->
+
 
  <!--Footer-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -245,6 +254,7 @@
 
 </body>
 </html>
+
 
 
 
