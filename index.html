@@ -157,26 +157,35 @@
 
   </div>
 </section>
-<!-- FORM KOMENTAR -->
-<section class="comment-section">
-  <h2>Komentar & Saran</h2>
-  <p>Silakan tinggalkan komentar atau saran Anda tentang website wisata ini.</p>
 
-  <form action="mailto:sitioliah28@gmail.com" method="post" enctype="text/plain">
-    
-    <label>Nama:</label><br>
-    <input type="text" name="Nama" required><br><br>
+  <!-- FORM PENILAIAN -->
+<section class="review-section">
+  <div class="review-box">
+    <h2>💬 Beri Penilaian</h2>
 
-    <label>Email:</label><br>
-    <input type="email" name="Email" required><br><br>
+    <form action="mailto:sitioliah28@gmail.com" method="post" enctype="text/plain">
 
-    <label>Komentar:</label><br>
-    <textarea name="Komentar" rows="5" required></textarea><br><br>
+      <input type="text" name="Nama" placeholder="Nama Anda" required>
 
-    <button type="submit">Kirim Komentar</button>
-  </form>
+      <input type="email" name="Email" placeholder="Email Anda" required>
+
+      <select name="Penilaian" required>
+        <option value="">⭐ Pilih Penilaian</option>
+        <option value="5 - Sangat Bagus">⭐⭐⭐⭐⭐ - Sangat Bagus</option>
+        <option value="4 - Bagus">⭐⭐⭐⭐ - Bagus</option>
+        <option value="3 - Cukup">⭐⭐⭐ - Cukup</option>
+        <option value="2 - Kurang">⭐⭐ - Kurang</option>
+        <option value="1 - Sangat Buruk">⭐ - Sangat Buruk</option>
+      </select>
+
+      <textarea name="Komentar" rows="5" placeholder="Tulis masukan Anda..." required></textarea>
+
+      <button type="submit">Kirim</button>
+
+    </form>
+  </div>
 </section>
-<!-- FORM KOMENTAR SELESAI -->
+<!-- FORM PENILAIAN SELESAI -->
 
  <!--Footer-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -236,6 +245,7 @@
 
 </body>
 </html>
+
 
 
 
