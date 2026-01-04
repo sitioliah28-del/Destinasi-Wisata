@@ -1,9 +1,8 @@
-* {
+*{
     margin: 0;
     padding: 0;
     font-family: sans-serif;
 }
-
 
 /*      NAVIGASI ATAS        */
 
@@ -23,7 +22,7 @@
 }
 
 .nav li:hover {
-    background-color: blue;
+    background-color: #45596e;
 }
 
 .data-list {
@@ -40,16 +39,10 @@
     transition: 0.5s;
 }
 
-.logo {
-    position: absolute;
-    top: 0;
-    left: 20px;
-}
-
 /* DROPDOWN */
 .list {
     display: none;
-    background-color: black;
+    background: rgba(0, 0, 0, 0.5);
     position: absolute;
     padding: 20px;
     z-index: 20;
@@ -65,6 +58,18 @@
     display: block;
 }
 
+.link-wisata {
+    color: #0645ad;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.link-wisata:hover {
+    color: #0b0080;
+}
+
+
 /*     HEADER FULL IMAGE     */
 
 .header {
@@ -76,11 +81,16 @@
 }
 
 .bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
     filter: brightness(60%);
+    z-index: 1;
 }
+
 
 .judul-header {
     position: absolute;
@@ -88,26 +98,145 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+
+    z-index: 2; /* TEKS DI ATAS GAMBAR */
+    width: 90%;
+    max-width: 900px;
 }
 
+
 .judul-header h1 {
-    font-size: 45px;
+    font-size: clamp(28px, 5vw, 45px); /* ukuran agar fleksibel */
     font-weight: 800;
     color: #fff;
-    text-shadow: 2px 3px 10px ;
+    text-shadow: 2px 3px 10px black;
 }
 
 .judul-header p {
-    font-size: 26px;
-    color: #f1f1f1; /* ganti sesuai keinginan */
+    font-size: clamp(16px, 3vw, 26px);
+    color: #f1f1f1;
     margin-top: 10px;
+    line-height: 1.5;
     text-shadow: 2px 3px 10px black;
 }
 
 .artikel {
-    width: 90%;
-    margin: 40px auto;
+    width: 85%;          /* dari 80% → 85% */
+    max-width: 1000px;   /* supaya tidak terlalu lebar */
+    margin: 30px auto;
 }
+
+.artikel h3 {
+  text-align: center;
+  font-size: 28px;        /* Membesarkan huruf */
+  font-weight: 700;       /* Tebal */
+  color: #2c3e50;         /* Warna elegan */
+  margin: 30px 0 15px;
+  letter-spacing: 1px;    /* Jarak antar huruf */
+  position: relative;
+}
+
+.jam-operasional {
+  display: flex;
+  gap: 40px;
+  padding: 60px;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.info {
+  flex: 1;
+}
+
+.info h2 {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+
+.item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+  align-items: flex-start;
+}
+
+.icon {
+  background: #9bc53d;
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.item p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.gambar {
+  flex: 1;
+  position: relative;
+}
+
+.gambar img {
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* Elemen utama tooltip */
+.tooltip {
+    position: relative;      /* Menjadi acuan posisi untuk tooltip-box */
+    color: #0645ad;           /* Warna teks biru */
+    cursor: pointer;          /* Kursor berubah jadi tangan saat diarahkan */
+    font-weight: 600;         /* Membuat teks lebih tebal */
+}
+
+/* Teks deskripsi di dalam tooltip */
+.tooltip-box span {
+    display: block;
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: justify;      /* Rata kiri-kanan rapi */
+    text-justify: inter-word; /* Jarak antar kata normal */
+    white-space: normal;      /* Cegah teks melebar aneh */
+}
+
+
+/* Box informasi tooltip */
+.tooltip-box {
+    display: none;            /* Tooltip disembunyikan secara default */
+    position: absolute;       /* Posisi mengikuti elemen induk (.tooltip) */
+    top: 25px;                /* Jarak tooltip 25px ke bawah */
+    left: 0;                  /* Posisi sejajar dari sisi kiri */
+    width: 300px;             /* Lebar tooltip */
+    background: white;        /* Warna latar putih */
+    color: #000;              /* Warna teks hitam */
+    padding: 12px;            /* Jarak isi dengan tepi kotak */
+    border-radius: 8px;       /* Sudut kotak membulat */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Efek bayangan */
+    z-index: 999;             /* Agar tooltip tampil di atas elemen lain */
+}
+
+/* Pengaturan gambar di dalam tooltip */
+.tooltip-box img {
+    width: 100%;              /* Gambar memenuhi lebar tooltip */
+    border-radius: 6px;       /* Sudut gambar membulat */
+    margin-bottom: 8px;       /* Jarak bawah gambar ke teks */
+}
+
+/* Tooltip muncul saat elemen di-hover */
+.tooltip:hover .tooltip-box {
+    display: block;           /* Menampilkan tooltip */
+}
+
 
 .wisata-item {
     margin-bottom: 60px;
@@ -121,9 +250,14 @@
 }
 
 .img-wisata {
-    width: 100%;
-    border-radius: 5px;
+    width: 70%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto 20px;
 }
+
 
 .caption {
     font-size: 14px;
@@ -138,33 +272,92 @@
     font-size: 18px;
     color: #333;
     line-height: 1.8;
+
     text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
 }
+
+
+.deskripsi:first-of-type {
+    text-indent: 10px;
+}
+
+.list-deskripsi {
+    list-style: disc;
+    margin-left: 30px;
+    padding-left: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+.list-deskripsi li {
+    margin-bottom: 16px;
+    line-height: 1.8;
+
+    text-align: justify;        /* Rata kiri-kanan */
+    text-justify: inter-word;   /* Spasi kata rapi */
+    hyphens: auto;              /* Pemenggalan kata */
+}
+
+
+.list-deskripsi li strong {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+
 
 /* ===== GALERI FOTO ===== */
 
 .galeri-wisata {
-    margin-top: 20px;
+    margin-top: 30px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* kolom diperbesar */
+    gap: 30px; /* jarak antar foto diperbesar */
 }
 
 .galeri-wisata img {
     width: 100%;
-    height: 280px;
+    height: 380px;       /* tinggi foto diperbesar */
     object-fit: cover;
     border-radius: 10px;
     transition: 0.3s;
-    margin-bottom: 20px;
 }
 
 .galeri-wisata img:hover {
-    transform: scale(1.05);
+    transform: scale(1.06);
 }
+
+
+/* ===== GALERI VIDEO ===== */
+.galeri-video {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* kolom lebih kecil */
+    gap: 25px;
+}
+
+.galeri-video video {
+    width: 100%;
+    height: 200px;       /* tinggi video diperkecil */
+    object-fit: cover;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.galeri-video video:hover {
+    transform: scale(1.03);
+}
+
+
 
 /*Buton Link*/
 .btn-info {
+    display: inline-block;
+    margin-top: 15px;
     background-color: #007bff;
     color:white;
     padding: 10px 20px;
@@ -175,72 +368,64 @@
     background-color: #0056b3;
 }
 
-/* ===========================
-   FOOTER
-   =========================== */
+
+   
+/*FOOTER*/
 .footer {
-    background: #45596e;
-    padding: 50px 20px;
-    font-family: Arial, sans-serif;
+  background-color: #4b5f73;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding: 60px 0 30px;
+}
+.footer,
+.footer a {
+  color: #111;
 }
 
+
 .footer-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
 .footer-col {
-    width: 30%;
-    min-width: 260px;
+  flex: 1;
+  min-width: 250px;
 }
 
 .footer-col h3 {
-    font-size: 22px;
-    margin-bottom: 15px;
+  font-size: 22px;
+  margin-bottom: 15px;
 }
 
 .footer-col ul {
-    list-style: disc;
-    padding-left: 20px;
+  list-style: disc;
+  padding-left: 20px;
 }
 
-.footer-col ul li,
-.footer-col p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 8px;
+.footer-col ul li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.6;
 }
-
-.footer-col a {
-    color: #000000;
-    text-decoration: none;
-}
-
-/* Supaya Link Navigasi Cepat tersusun ke bawah */
-.footer-col .data-list {
-    padding-left: 20px; /* biar rapi seperti list */
-}
-
-.footer-col .data-list a {
-    display: block;      /* biar turun ke bawah */
-    margin-bottom: 8px;  /* jarak antar item */
-}
-
-.footer-col .data-list li {
-    list-style: disc;    /* titik bullet */
-    color: #000;         /* warna tulisan */
-}
-
 
 .footer-bottom {
-    text-align: center;
-    padding-top: 25px;
-    margin-top: 40px;
-    border-top: 1px solid #ccc;
-    font-size: 17px;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.4);
+  text-align: center;
+  font-weight: bold;
 }
+
 
 
 /* ===========================
