@@ -200,30 +200,32 @@
 
 /* bg card*/
 .bg-card{
-    width: 90%; /* lebarnya bordir*/
+    width: 90%;
     display: flex;
-    justify-content: center;/*agar card nya ke tengah*/
+    justify-content: center;
     flex-wrap: wrap;
     margin: auto;
 }
 
 .card{
-    width: 340px ;
-    height: 400px;
-    margin: auto;
-    margin: 0 20px 50px;
-
-}
-
-.card p {
-    margin-bottom: 10px;   /* jarak antara paragraf dan tombol */
-}
-
-
-.card:hover{
-    box-shadow: 0px 0px 10px #333;/* untuk */
+    width: 400px;
+    min-height: 400px;   /* ✔ tinggi minimal */
+    height: auto;        /* ✔ mengikuti konten */
+    margin: 0 30px 50px;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;    /* biar rapi */
     transition: 300ms;
 }
+
+.card p{
+    margin-bottom: 10px;
+}
+
+.card:hover{
+    box-shadow: 0px 0px 10px #333;
+}
+
 .gambar{
     width: 100%;
     height: 200px;
@@ -233,32 +235,35 @@
 .gambar img{
     width: 100%;
     height: 100%;
-    transition: 1s; /*transisi gambarnya*/
+    object-fit: cover;
+    transition: 1s;
 }
+
 .des-card{
-    padding: 5px;
-    padding-left: 15px;
-    padding-bottom: 20px;
+    padding: 5px 15px 20px;
 }
+
 .des-card h2{
     color: rgb(13, 13, 122);
-    margin-bottom: 10px; /* kasih jarak judul*/
+    margin-bottom: 10px;
 }
 
 .des-card p{
-    line-height: 20px; /*kasih jarak*/
+    line-height: 20px;
     color: #333;
-    text-align: justify;/* paragraf agar rapih kiri-kanan*/
+    text-align: justify;
     font-size: 17px;
 }
 
 .bg-card a{
     text-decoration: none;
 }
+
 .card:hover img{
-    transform: scale(1.5); /* agar gambar ngezoom*/
+    transform: scale(1.5);
     transition: 2s;
 }
+
 /*FOOTER*/
 .footer {
     background: #45596e;
@@ -402,53 +407,31 @@
     color: #444;
     margin-bottom: 40px;
 }
+.img-wisata{
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
 
-.gallery-container {
+
+.caption {
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+.gallery-container{
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    gap: 30px;              /* jarak antar gambar */
+    flex-wrap: wrap;        /* biar responsif */
 }
 
-/* Card Galeri */
-.gallery-card {
-    width: 340px;
-    background: #fff;
-    border-radius: 10px;
-    margin: 15px;
-    overflow: hidden;
-    box-shadow: 0 0 8px rgba(0,0,0,0.2);
-    transition: 0.3s;
-}
-
-.gallery-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 15px rgba(0,0,0,0.3);
-}
-
-.gallery-card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    transition: 0.6s ease;
-}
-
-.gallery-card:hover img {
-    transform: scale(1.2);
-}
-
-.gallery-text {
-    padding: 15px;
-}
-
-.gallery-text h3 {
-    color: #0d0d7a;
-    margin-bottom: 10px;
-}
-
-.gallery-text p {
-    color: #333;
-    line-height: 20px;
-    text-align: justify;
+.gallery-item{
+    text-align: center;
 }
 
 .review-section {
@@ -621,6 +604,7 @@
         font-size: 14px;
     }
 }
+
 
 
 
