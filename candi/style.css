@@ -6,25 +6,30 @@
 
 /*      NAVIGASI ATAS        */
 
+/* NAVIGASI (MENU ATAS) */
 .nav {
-    color: #fff;
-    display: flex;
-    padding: 10px 0;
-    background-color:black;
-    position: fixed;
-    width: 100%;
-    z-index: 10;
+    color: #fff;                
+    display: flex;               /* Menyusun logo dan menu sejajar horizontal */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(7, 7, 7, 0.4);  /* Warna latar belakang hitam */
+    position: fixed;             /* Menempel di atas layar saat discroll */
+    width: 100%;                 /* Lebar penuh layar */
+    z-index: 10;                 /* Supaya berada di atas elemen lain */
 }
 
 .nav a {
-    color: #fff;
-    text-decoration: none;
+    color: #fff;                
+    text-decoration: none;       /* Menghilangkan garis bawah pada link */
 }
 
-.nav li:hover {
-    background-color: #45596e;
+.nav li:hover{
+    background-color: #444;
 }
 
+.nav a:hover {
+    color: #fff; /* Efek hover untuk tautan di menu navigasi */          
+}
 .data-list {
     margin-left: 40%;
 }
@@ -414,3 +419,4 @@
 .toggle-btn:hover {
     transform: scale(1.1);
 }
+
